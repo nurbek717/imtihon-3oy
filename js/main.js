@@ -1,45 +1,5 @@
-/////// 1-masiq ___________________________________________________
 
-
-
-
-
-
-
-// /  2 - mashiq __________________________________________________
-
-var arryMetodic = ["jazz"," blues"]
-console.log(arryMetodic);
-
-arryMetodic.push("rock-n-rol")
-console.log(arryMetodic);
-
-arryMetodic.splice(1,1, "classic")
-console.log(arryMetodic);
-
-arryMetodic.splice(0,1, )
-console.log(arryMetodic);
-
-arryMetodic.unshift("rap", "reggae")
-console.log(arryMetodic);
-
-
-function upText(ismlar) {
- var resalt = []
- 
- for (var name of ismlar) {
-  var slice = name.split("")
-  slice[0] = slice[0].toUpperCase()
-  resalt.push(slice.join(""))
-  
- }
- console.log(resalt);
-}
-
-console.log(upText(arryMetodic));
-
-
-///Pokemons________________________________________________________
+// ///Pokemons________________________________________________________
 var pokemons = [
 	{
 		"name": "Bulbasaur",
@@ -202,49 +162,30 @@ var pokemons = [
 
 var elCardImg = document.querySelector("#card__img");
 for (let i = 0; i < 21; i++) {
-	
+
 	var newDiv = document.createElement("div");
 	var newH2 = document.createElement("h2");
 	var newp = document.createElement("p");
 	var newIMG = document.createElement("img");
-	
+
 	newIMG.setAttribute("src", pokemons[i].img);
 	newDiv.appendChild(newIMG);
-	
-	
-	
+
+
+
 	newH2.textContent = "Name : " + pokemons[i].name;
 	newDiv.appendChild( newH2);
-	
+
 	newp.textContent = "Type : " + pokemons[i].type;
 	newDiv.appendChild(newp);
-	
-	
-	
+
+
+
 	newDiv.classList.add("list__item");
-	
+
 	elCardImg.appendChild(newDiv);
 }
 
 console.log(elCardImg);
 // .classList.add("list__item");
 
-
-/// 3-mashiq  _____________________________________________________
-
-
-var elText = document.querySelector(".text")
-var salaries = {
-	"Akmal": 1200,
-	"Salim": 5200,
-	"Karima": 1800,
-}
-function sumSalaries(nambers) {
-   var resalt = 0
- for (var namber of Object.values(nambers)) {
-    resalt = resalt + namber
- }
- return resalt
-}
-alert(sumSalaries(salaries))
-console.log(sumSalaries(salaries)) // Natija: 8200 -> chiqishi kk
